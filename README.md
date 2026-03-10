@@ -23,10 +23,3 @@ This system uses LangChain, ChromaDB, and Ollama (Mistral) to answer cultural he
     ```bash
     python query.py "What can you tell me about the objects in the database?"
     ```
-
-## Constraints
-The system follows these rules from `Requirements.txt`:
-- Uses ONLY provided context.
-- Formats books as `Title by Author (Year)`.
-- Rejects non-vegetarian recipe requests.
-- Returns bulleted lists for multiple matches.
