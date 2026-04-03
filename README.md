@@ -1,6 +1,6 @@
 # Europeana RAG System Setup
 
-This system uses LangChain, ChromaDB, and Ollama (Mistral) to answer cultural heritage questions.
+This system uses LangChain, ChromaDB, and either Ollama (local) or Gemini (cloud) to answer cultural heritage questions.
 
 ## Prerequisites
 
@@ -10,6 +10,11 @@ This system uses LangChain, ChromaDB, and Ollama (Mistral) to answer cultural he
     ollama pull mistral
     ```
 3.  **Run Ollama**: Ensure the Ollama service is running.
+
+## Gemini Prerequisites
+
+1.  **Google API Key**: Obtain keys from [Google AI Studio](https://aistudio.google.com/).
+2.  **Environment Variable**: Set `GOOGLE_API_KEY` in your shell.
 
 ## How to Use
 
@@ -24,9 +29,16 @@ This system uses LangChain, ChromaDB, and Ollama (Mistral) to answer cultural he
     python query.py "What can you tell me about the objects in the database?"
     ```
 
+### Option 2: Gemini (Cloud)
+
+1.  **Ingest Data**:
+    ```bash
+    python gemini_ingest.py
+    ```
+
+2.  **Query the System**:
+    ```bash
+    python gemini_query.py "What can you tell me about the objects in the database?"
+    ```
+
 ## Constraints
-The system follows these rules from `Requirements.txt`:
-- Uses ONLY provided context.
-- Formats books as `Title by Author (Year)`.
-- Rejects non-vegetarian recipe requests.
-- Returns bulleted lists for multiple matches.
