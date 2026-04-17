@@ -1,6 +1,7 @@
 # Europeana RAG System Setup
 
-This system uses LangChain, ChromaDB, and Ollama (Mistral) to answer cultural heritage questions.
+A retrieval-augmented generation (RAG) prototype over cultural heritage data from Europeana.eu, combining semantic data modeling with LLM-based question answering.
+This system uses LangChain, ChromaDB, and Ollama (Mistral or Gemini) to answer cultural heritage questions.
 
 ## Prerequisites
 
